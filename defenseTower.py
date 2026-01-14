@@ -25,7 +25,6 @@ PATH = [
     (850, 350), (950, 350)
 ]
 
-
 # ---------------------------------------------------
 # TREE
 # ---------------------------------------------------
@@ -37,7 +36,7 @@ class Tree:
         self.level = 1
         self.income = 10
         self.timer = 0
-        self.interval = 180
+        self.interval = 360
         self.upgrade_cost = 50
         self.radius = 25
 
@@ -94,7 +93,6 @@ class Tree:
         text = font.render(f"Lv{self.level}", True, YELLOW)
         screen.blit(text, (self.x - 10, self.y - 50))
 
-
 # ---------------------------------------------------
 # PROJECTILE
 # ---------------------------------------------------
@@ -128,7 +126,6 @@ class Projectile:
     def draw(self, screen):
         pygame.draw.circle(screen, YELLOW, (int(self.x), int(self.y)), 5)
         pygame.draw.circle(screen, (255, 200, 0), (int(self.x), int(self.y)), 5, 2)
-
 
 # ---------------------------------------------------
 # TOWER
@@ -216,7 +213,6 @@ class Tower:
         for proj in self.projectiles:
             proj.draw(screen)
 
-
 # ---------------------------------------------------
 # ENEMY
 # ---------------------------------------------------
@@ -303,8 +299,6 @@ class Enemy:
         hp_text = font_hp.render(f"{hp_percent}%", True, WHITE)
         text_rect = hp_text.get_rect(center=(int(self.x), bar_y - 8))
         screen.blit(hp_text, text_rect)
-        
-
 
 # ---------------------------------------------------
 # GAME
