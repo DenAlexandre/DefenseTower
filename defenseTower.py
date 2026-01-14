@@ -269,23 +269,20 @@ class Enemy:
             return True
         return False
 
-    def draw(self, screen, index):
-        # Récupérer l'ennemi depuis la liste globale avec l'index
-        enemy = game.enemies[index]
-        
-        if not enemy.alive:
+    def draw(self, screen):
+        if not self.alive:
             return
             
-        body_color = (220, 20, 20) if enemy.has_tree else (138, 43, 226)
-        pygame.draw.circle(screen, body_color, (int(enemy.x), int(enemy.y)), 12)
-        pygame.draw.circle(screen, BLACK, (int(enemy.x), int(enemy.y)), 12, 2)
+        body_color = (220, 20, 20) if self.has_tree else (138, 43, 226)
+        pygame.draw.circle(screen, body_color, (int(self.x), int(self.y)), 12)
+        pygame.draw.circle(screen, BLACK, (int(self.x), int(self.y)), 12, 2)
 
         # Barre de vie améliorée
         bar_width = 32
         bar_height = 6
-        hp_ratio = enemy.hp / enemy.max_hp
-        bar_x = int(enemy.x) - bar_width // 2
-        bar_y = int(enemy.y) - 25
+        hp_ratio = self.hp / self.max_hp
+        bar_x = int(self.x) - bar_width // 2
+        bar_y = int(self.y) - 25
         progress_bar = int(bar_width * hp_ratio)
 
         pygame.draw.rect(screen, (80, 0, 0), (bar_x, bar_y, bar_width, bar_height))
@@ -299,6 +296,14 @@ class Enemy:
 
         pygame.draw.rect(screen, color, (bar_x, bar_y, progress_bar, bar_height))
         pygame.draw.rect(screen, BLACK, (bar_x, bar_y, bar_width, bar_height), 1)
+        
+        # Afficher le pourcentage de vie
+        font_hp = pygame.font.Font(None, 16)
+        hp_percent = int(hp_ratio * 100)
+        hp_text = font_hp.render(f"{hp_percent}%", True, WHITE)
+        text_rect = hp_text.get_rect(center=(int(self.x), bar_y - 8))
+        screen.blit(hp_text, text_rect)
+        
 
 
 # ---------------------------------------------------
@@ -310,16 +315,17 @@ class Game:
         pygame.display.set_caption("Defense Tower")
         self.clock = pygame.time.Clock()
 
-
-        self.first = True
         self.money = 120
         self.lives = 10
         self.level = 1
         self.next_level = 3
-        self.wave_init = 1
+        self.wave_init = 5
         self.wave = 0
-        self.wave_timer = 0
-        self.wave_interval = 550
+        
+        # Gestion du spawn progressif
+        self.enemies_to_spawn = 0
+        self.spawn_timer = 0
+        self.spawn_interval = 40  # Frames entre chaque spawn
 
         self.towers = []
         self.enemies = []
@@ -335,8 +341,7 @@ class Game:
 
     def spawn_wave(self):
         count = self.wave_init + self.wave * 2
-        for _ in range(count):
-            self.enemies.append(Enemy(self.level, PATH[0]))
+        self.enemies_to_spawn = count
         self.wave += 1
         if self.wave % self.next_level == 0:
             self.level += 1
@@ -402,15 +407,15 @@ class Game:
         self.lives = 10
         self.level = 1
         self.wave = 0
-        self.wave_timer = 0
+        self.enemies_to_spawn = 0
+        self.spawn_timer = 0
         self.towers = []
         self.enemies = []
         self.trees = [
             Tree(900, 300),
             Tree(900, 400)
         ]
-        self.selected_tower_type = None
-        self.selected_object = None
+
 
     def update(self):
         if self.game_state != "playing":
@@ -419,11 +424,17 @@ class Game:
         for tree in self.trees:
             self.money += tree.update()
 
-        self.wave_timer += 1
-        if self.wave_timer >= self.wave_interval or game.first:
-            game.first = False
+        # Spawn une nouvelle vague si tous les ennemis sont éliminés ET qu'il n'y en a plus à spawner
+        if len(self.enemies) == 0 and self.enemies_to_spawn == 0:
             self.spawn_wave()
-            self.wave_timer = 0
+        
+        # Spawn progressif des ennemis
+        if self.enemies_to_spawn > 0:
+            self.spawn_timer += 1
+            if self.spawn_timer >= self.spawn_interval:
+                self.enemies.append(Enemy(self.level, PATH[0]))
+                self.enemies_to_spawn -= 1
+                self.spawn_timer = 0
 
         for tower in self.towers:
             tower.update(self.enemies)
@@ -454,8 +465,8 @@ class Game:
             tower.draw(self.screen)
 
         # Dessiner chaque ennemi en passant son index
-        for index in range(len(self.enemies)):
-            self.enemies[index].draw(self.screen, index)
+        for enemy in self.enemies:
+            enemy.draw(self.screen)
 
         self.draw_ui()
         pygame.display.flip()
