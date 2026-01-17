@@ -8,6 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UserSecretsId>7f085cef-960c-439c-91bf-bf564224f836</UserSecretsId>
+    <Platforms>AnyCPU;x64</Platforms>
+    <Configurations>Debug;Release;WindowsMachine</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
