@@ -1,8 +1,8 @@
 using System.Text.Json;
-using DefenseTower.Models;
+using DefenseTowerOrigin.Models;
 using Microsoft.Extensions.Logging;
 
-namespace DefenseTower.Data;
+namespace DefenseTowerOrigin.Data;
 
 public class SeedDataService
 {

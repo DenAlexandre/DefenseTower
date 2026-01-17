@@ -1,10 +1,10 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using DefenseTower.Models;
+using DefenseTowerOrigin.Models;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
-namespace DefenseTower.PageModels;
+namespace DefenseTowerOrigin.PageModels;
 
 public partial class ProjectDetailPageModel : ObservableObject, IQueryAttributable, IProjectTaskPageModel
 {

@@ -1,7 +1,7 @@
 using System.Windows.Input;
-using DefenseTower.Models;
+using DefenseTowerOrigin.Models;
 
-namespace DefenseTower.Pages.Controls;
+namespace DefenseTowerOrigin.Pages.Controls;
 
 public partial class TaskView
 {

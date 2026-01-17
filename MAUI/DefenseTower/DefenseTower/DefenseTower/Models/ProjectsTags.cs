@@ -1,4 +1,4 @@
-namespace DefenseTower.Models;
+namespace DefenseTowerOrigin.Models;
 
 public class ProjectsTags
 {

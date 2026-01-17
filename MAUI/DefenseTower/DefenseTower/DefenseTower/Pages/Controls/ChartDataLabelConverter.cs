@@ -1,8 +1,8 @@
 using System;
 using System.Globalization;
-using DefenseTower.Models;
+using DefenseTowerOrigin.Models;
 
-namespace DefenseTower.Pages.Controls;
+namespace DefenseTowerOrigin.Pages.Controls;
 
 public class ChartDataLabelConverter : IValueConverter
 {

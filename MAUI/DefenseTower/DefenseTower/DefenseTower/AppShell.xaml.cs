@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using Font = Microsoft.Maui.Font;
-namespace DefenseTower;
+namespace DefenseTowerOrigin;
 
 public partial class AppShell : Shell
 {

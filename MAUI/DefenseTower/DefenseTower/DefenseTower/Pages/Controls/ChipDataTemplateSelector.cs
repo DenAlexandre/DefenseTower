@@ -1,6 +1,6 @@
-using DefenseTower.Models;
+using DefenseTowerOrigin.Models;
 
-namespace DefenseTower.Pages.Controls;
+namespace DefenseTowerOrigin.Pages.Controls;
 
 public class ChipDataTemplateSelector : DataTemplateSelector
 {

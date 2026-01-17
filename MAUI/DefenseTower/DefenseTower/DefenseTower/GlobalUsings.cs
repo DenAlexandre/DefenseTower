@@ -1,6 +1,6 @@
 global using Fonts;
-global using DefenseTower.Data;
-global using DefenseTower.PageModels;
-global using DefenseTower.Pages;
-global using DefenseTower.Services;
-global using DefenseTower.Utilities;
+global using DefenseTowerOrigin.Data;
+global using DefenseTowerOrigin.PageModels;
+global using DefenseTowerOrigin.Pages;
+global using DefenseTowerOrigin.Services;
+global using DefenseTowerOrigin.Utilities;

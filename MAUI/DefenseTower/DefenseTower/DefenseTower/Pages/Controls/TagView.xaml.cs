@@ -1,4 +1,4 @@
-namespace DefenseTower.Pages.Controls;
+namespace DefenseTowerOrigin.Pages.Controls;
 
 public partial class TagView
 {

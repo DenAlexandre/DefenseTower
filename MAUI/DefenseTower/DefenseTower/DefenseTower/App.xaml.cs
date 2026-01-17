@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace DefenseTower;
+namespace DefenseTowerOrigin;
 
 public partial class App : Application
 {

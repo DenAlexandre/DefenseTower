@@ -1,4 +1,4 @@
-namespace DefenseTower.Pages;
+namespace DefenseTowerOrigin.Pages;
 
 public partial class ManageMetaPage : ContentPage
 {

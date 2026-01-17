@@ -1,11 +1,11 @@
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using DefenseTower.Data;
-using DefenseTower.Models;
-using DefenseTower.Services;
+using DefenseTowerOrigin.Data;
+using DefenseTowerOrigin.Models;
+using DefenseTowerOrigin.Services;
 
-namespace DefenseTower.PageModels;
+namespace DefenseTowerOrigin.PageModels;
 
 public partial class ManageMetaPageModel : ObservableObject
 {

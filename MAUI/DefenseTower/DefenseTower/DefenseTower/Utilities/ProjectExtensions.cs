@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
-using DefenseTower.Models;
+using DefenseTowerOrigin.Models;
 
-namespace DefenseTower.Utilities;
+namespace DefenseTowerOrigin.Utilities;
 
 /// <summary>
 /// Project Model Extensions

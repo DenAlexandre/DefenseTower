@@ -1,8 +1,8 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using DefenseTower.Models;
+using DefenseTowerOrigin.Models;
 
-namespace DefenseTower.PageModels;
+namespace DefenseTowerOrigin.PageModels;
 
 public partial class MainPageModel : ObservableObject, IProjectTaskPageModel
 {

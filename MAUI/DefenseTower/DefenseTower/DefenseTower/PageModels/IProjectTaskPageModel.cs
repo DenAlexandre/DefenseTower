@@ -1,7 +1,7 @@
 using CommunityToolkit.Mvvm.Input;
-using DefenseTower.Models;
+using DefenseTowerOrigin.Models;
 
-namespace DefenseTower.PageModels;
+namespace DefenseTowerOrigin.PageModels;
 
 public interface IProjectTaskPageModel
 {

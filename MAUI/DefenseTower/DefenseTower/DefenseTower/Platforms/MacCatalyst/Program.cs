@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace DefenseTower;
+namespace DefenseTowerOrigin;
 
 public class Program
 {

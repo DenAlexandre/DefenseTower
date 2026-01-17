@@ -1,6 +1,6 @@
 using System;
 
-namespace DefenseTower.Models;
+namespace DefenseTowerOrigin.Models;
 
 public class IconData
 {

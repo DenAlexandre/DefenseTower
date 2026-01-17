@@ -1,5 +1,5 @@
 <Solution>
   <Project Path="DefenseTower.AppHost/DefenseTower.AppHost.csproj" />
   <Project Path="DefenseTower.ServiceDefaults/DefenseTower.ServiceDefaults.csproj" />
-  <Project Path="DefenseTower/DefenseTower.csproj" />
+  <Project Path="DefenseTower/DefenseTowerOrigin.csproj" />
 </Solution>

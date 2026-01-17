@@ -1,4 +1,4 @@
-namespace DefenseTower.Services;
+namespace DefenseTowerOrigin.Services;
 
 /// <summary>
 /// Error Handler Service.

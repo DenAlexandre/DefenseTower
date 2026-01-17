@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace DefenseTower;
+namespace DefenseTowerOrigin;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

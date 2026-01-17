@@ -1,4 +1,4 @@
-namespace DefenseTower.Data;
+namespace DefenseTowerOrigin.Data;
 
 public static class Constants
 {

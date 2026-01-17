@@ -1,8 +1,8 @@
-using DefenseTower.Models;
+using DefenseTowerOrigin.Models;
 using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.Logging;
 
-namespace DefenseTower.Data;
+namespace DefenseTowerOrigin.Data;
 
 /// <summary>
 /// Repository class for managing projects in the database.

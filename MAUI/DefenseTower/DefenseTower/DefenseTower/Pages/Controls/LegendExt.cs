@@ -1,6 +1,6 @@
 using Syncfusion.Maui.Toolkit.Charts;
 
-namespace DefenseTower.Pages.Controls;
+namespace DefenseTowerOrigin.Pages.Controls;
 
 public class LegendExt : ChartLegend
 {

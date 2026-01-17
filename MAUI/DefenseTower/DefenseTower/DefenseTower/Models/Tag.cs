@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
 using CommunityToolkit.Maui.Core.Extensions;
 
-namespace DefenseTower.Models;
+namespace DefenseTowerOrigin.Models;
 
 public class Tag
 {

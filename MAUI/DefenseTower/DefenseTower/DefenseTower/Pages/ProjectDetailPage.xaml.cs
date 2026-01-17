@@ -1,6 +1,6 @@
-using DefenseTower.Models;
+using DefenseTowerOrigin.Models;
 
-namespace DefenseTower.Pages;
+namespace DefenseTowerOrigin.Pages;
 
 public partial class ProjectDetailPage : ContentPage
 {

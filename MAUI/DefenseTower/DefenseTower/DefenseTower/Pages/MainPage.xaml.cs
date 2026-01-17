@@ -1,7 +1,7 @@
-﻿using DefenseTower.Models;
-using DefenseTower.PageModels;
+﻿using DefenseTowerOrigin.Models;
+using DefenseTowerOrigin.PageModels;
 
-namespace DefenseTower.Pages;
+namespace DefenseTowerOrigin.Pages;
 
 public partial class MainPage : ContentPage
 {

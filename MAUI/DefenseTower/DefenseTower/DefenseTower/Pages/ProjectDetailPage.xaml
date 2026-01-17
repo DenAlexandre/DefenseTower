@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:pageModels="clr-namespace:DefenseTower.PageModels"
-             xmlns:models="clr-namespace:DefenseTower.Models"
-             xmlns:pages="clr-namespace:DefenseTower.Pages"
+             xmlns:pageModels="clr-namespace:DefenseTowerOrigin.PageModels"
+             xmlns:models="clr-namespace:DefenseTowerOrigin.Models"
+             xmlns:pages="clr-namespace:DefenseTowerOrigin.Pages"
              xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
-             xmlns:controls="clr-namespace:DefenseTower.Pages.Controls"
+             xmlns:controls="clr-namespace:DefenseTowerOrigin.Pages.Controls"
              xmlns:fonts="clr-namespace:Fonts"
-             x:Class="DefenseTower.Pages.ProjectDetailPage"
+             x:Class="DefenseTowerOrigin.Pages.ProjectDetailPage"
              x:DataType="pageModels:ProjectDetailPageModel"
              Title="Project">
 

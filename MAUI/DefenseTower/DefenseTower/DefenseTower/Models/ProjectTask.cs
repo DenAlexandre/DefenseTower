@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace DefenseTower.Models;
+namespace DefenseTowerOrigin.Models;
 
 public class ProjectTask
 {

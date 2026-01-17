@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Toolkit.Hosting;
 
-namespace DefenseTower;
+namespace DefenseTowerOrigin;
 
 public static class MauiProgram
 {
